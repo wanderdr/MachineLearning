@@ -18,7 +18,7 @@ class GeneticAlgorithm:
 		
 		#You can change the above variables
 		self.__head = 20
-		self.__mutation_chance = 0.005
+		self.__mutation_chance = 0.05
 		self.__total_population = 100
 		self.__list = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! '
 

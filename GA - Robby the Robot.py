@@ -8,17 +8,17 @@ import random
 import pandas as pd
 import numpy as np
 
-class GA:
-	def __init__(self: str):
+class GeneticAlgorithm:
+	def __init__(self, worlds: int, world_size: int, thrash_chance: int):
 		data = {'Data': [], 'Fitness': []}
 		self.__population = pd.DataFrame(data=data)
 		self.__total_population = 200
 		self.__generation = 1
 		self.__world = []
 		
-		self.__total_worlds = 100
-		self.__size_world = 10
-		self.__thrash_chance = 0.2
+		self.__total_worlds = worlds
+		self.__size_world = world_size
+		self.__thrash_chance = thrash_chance
 		self.__total_movements = 250
 		self.__total_actions = 5
 		self.__pos_x = 0
@@ -178,5 +178,5 @@ class GA:
 		#Throw the actual population away and use just the breeded population
 		self.__population = temp_population
 
-ga = GeneticAlgorithm('Hello World!')
+ga = GeneticAlgorithm(100, 10, 0.2)
 ga.Execute()
