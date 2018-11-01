@@ -12,8 +12,7 @@ class GeneticAlgorithm:
 	def __init__(self, model: str):
 		#Do not change those variables
 		self.__model = model
-		data = {'Data': [], 'Fitness': []}
-		self.__population = pd.DataFrame(data=data)
+		self.__population = pd.DataFrame(data={'Data': [], 'Fitness': []})
 		self.__generation = 1
 		
 		#You can change the above variables
